@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Summer Animated Landing page with GSAP | Crimson</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+    <div class="bg"></div>
+    <!-- NAVBAR
+    =============================== -->
+    <nav class="navbar">
+        <div class="logo">Summer</div>
+        <div class="menu-item">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Offers</li>
+            </ul>
+        </div>
+        <div class="menu">
+            <ion-icon name="ios-menu"></ion-icon>
+        </div>
+        <div class="search">
+            <ion-icon name="ios-search"></ion-icon>
+        </div>
+    </nav>
+    <!-- SOCIAL MEDIA
+    =============================== -->
+    <div class="media">
+        <ul>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+        </ul>
+    </div>
+    <!-- IMAGE
+    =============================== -->
+    <div class="img-wrapper">
+        <div class="img"></div>
+        <div class="block"></div>
+    </div>
+    <!-- TEXT
+    =============================== -->
+   <div class="text">
+       <h1>
+           <span class="text-bar">Breathe in <label> the sea</label></span>
+       </h1>
+       <p>
+           <span class="text-bar">get the summer body</span>
+       </p>
+   </div>
+    <!-- BOTTOMNAV
+    =============================== -->
+    <div class="bottomnav">
+        <div class="next">up next</div>
+
+        <div class="nav">
+            <ul>
+                <li>
+                    <ion-icon name="ios-arrow-up"></ion-icon>
+                </li>
+                <li>
+                    <ion-icon name="ios-arrow-down"></ion-icon>
+                </li>
+            </ul>
+            <div class="bottomnav-img"></div>
+        </div>
+    </div>
+</div>
+
+    <script>
+       TweenMax.to(".bg", 2,{
+           width:"100%",
+           ease:Expo.easeInOut
+       })
+        // NAVBAR
+       TweenMax.from(".navbar", 1.5,  {
+           delay:2.5,
+           opacity:0,
+           y:20,
+           ease:Expo.easeInOut
+       })
+        // SOCIAL MEDIA
+        TweenMax.staggerFrom(".media ul li", 1.5, {
+            delay:2.8,
+            opacity:0,
+            x:-30,
+            ease:Expo.easeInOut
+        }, 0.08)
+        // TEXT
+        TweenMax.from(".text h1 .text-bar", 1.5,  {
+           delay:1.6,
+           y:"100%",
+           ease:Expo.easeInOut
+       })
+       TweenMax.from(".text p .text-bar", 1.5,  {
+           delay:2,
+           y:"100%",
+           ease:Expo.easeInOut
+       })
+        // BOTTOMNAV
+        TweenMax.from(".bottomnav", 1.5,  {
+           delay:3.2,
+           opacity:0,
+           y:30,
+           ease:Expo.easeInOut
+       })
+       TweenMax.from(".bottomnav .next", 1.5,  {
+           delay:3.5,
+           opacity:0,
+           x:-20,
+           ease:Expo.easeInOut
+       })
+    </script>
+</body>
+
+</html>
